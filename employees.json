@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1715623456789,
+    "name": "Amarpa Shashanka Keerthi Kumar",
+    "gender": "Female",
+    "department": [
+      "Sales",
+      "HR"
+    ],
+    "salary": 10000,
+    "startDate": "2019-10-29",
+    "notes": "Top performer",
+    "profilePic": "assets/profile-images/Ellipse -1.png"
+  }
+]

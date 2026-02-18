@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Employee</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="header">
+        <span class="logo-text">EMPLOYEE <b>PAYROLL</b></span>
+    </header>
+
+    <div class="form-content">
+        <form class="form" action="/add" method="POST">
+            <div class="form-head">Employee Payroll Form</div>
+
+            <div class="row-content">
+                <label class="label text" for="name">Name</label>
+                <input class="input" type="text" id="name" name="name" placeholder="Your name.." required>
+            </div>
+
+            <div class="row-content">
+                <label class="label text">Gender</label>
+                <div>
+                    <input type="radio" id="male" name="gender" value="Male" required>
+                    <label class="text" for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label class="text" for="female">Female</label>
+                </div>
+            </div>
+
+            <div class="row-content">
+                <label class="label text">Department</label>
+                <div>
+                    <input class="checkbox" type="checkbox" id="hr" name="department" value="HR">
+                    <label class="text" for="hr">HR</label>
+                    <input class="checkbox" type="checkbox" id="sales" name="department" value="Sales">
+                    <label class="text" for="sales">Sales</label>
+                    <input class="checkbox" type="checkbox" id="finance" name="department" value="Finance">
+                    <label class="text" for="finance">Finance</label>
+                    <input class="checkbox" type="checkbox" id="engineer" name="department" value="Engineer">
+                    <label class="text" for="engineer">Engineer</label>
+                </div>
+            </div>
+
+            <div class="row-content">
+                <label class="label text" for="salary">Salary</label>
+                <input class="input" type="number" id="salary" name="salary" placeholder="Salary" required>
+            </div>
+
+            <div class="row-content">
+                <label class="label text">Start Date</label>
+                <div>
+                    <input
+                    type="date"
+                    id="startDate"
+                    name="startDate"
+                    value="2018-07-22"
+                    required
+                     />
+                </div>
+            </div>
+
+            <div class="row-content">
+                <label class="label text" for="notes">Notes</label>
+                <textarea id="notes" class="input" name="notes" placeholder="" style="height:100px"></textarea>
+            </div>
+
+            <div class="buttonParent">
+                <a href="/" class="resetButton button cancelButton">Cancel</a>
+                <button type="submit" class="button submitButton">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

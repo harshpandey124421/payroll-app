@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7;
+}
+
+.header {
+    padding: 15px 0;
+    background-color: #ffffff;
+    box-shadow: 0 3px 6px #00000029;
+}
+
+.logo-text {
+    font-size: 20px;
+    padding-left: 50px;
+    color: #82A70C;
+    font-family: 'Montserrat', sans-serif;
+}
+.logo-text b { color: #42515F; }
+
+.main-content, .form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+}
+
+/* TABLE STYLES */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.emp-detail-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #42515F;
+    display: flex;
+    align-items: center;
+}
+
+.add-button {
+    background-color: #82A70C;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.table {
+    width: 80%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    min-width: 800px;
+}
+
+.table th {
+    text-align: left;
+    padding: 10px;
+    background-color: #42515F;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.table td {
+    background-color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.dept-label {
+    background-color: #E9FEA5;
+    padding: 4px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    margin-right: 5px;
+    color: #3b3b3b;
+}
+
+.profile-img { width: 40px; height: 40px; border-radius: 50%; }
+
+/* FORM STYLES */
+.form {
+    width: 60%;
+    background: white;
+    padding: 40px 60px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px #00000029;
+}
+
+.form-head {
+    font-size: 24px;
+    font-weight: bold;
+    color: #42515F;
+    margin-bottom: 20px;
+}
+
+.row-content {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.label {
+    min-width: 150px;
+    font-weight: 500;
+    color: #42515F;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.buttonParent {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.button {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.submitButton { background-color: #e2e2e2; color: #42515F; }
+.submitButton:hover { background-color: #82A70C; color: white; }
+.cancelButton { background-color: #e2e2e2; color: #42515F; text-align: center;}

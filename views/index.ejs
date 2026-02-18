@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Payroll</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-content">
+            <span class="logo-text">EMPLOYEE <b>PAYROLL</b></span>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="header-content">
+            <div class="emp-detail-text">
+                Employee Details <div class="emp-count"><%= employees.length %></div>
+            </div>
+            <a href="/add" class="add-button">+ Add User</a>
+        </div>
+
+        <table id="display" class="table">
+            <thead>
+                <tr>
+                    <th>Profile</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                    <th>Start Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% employees.forEach(emp => { %>
+                <tr>
+                    <td><img src="<%= emp.profilePic %>" alt="" class="profile-img"></td>
+                    <td><%= emp.name %></td>
+                    <td><%= emp.gender %></td>
+                    <td>
+                        <% emp.department.forEach(dept => { %>
+                            <span class="dept-label"><%= dept %></span>
+                        <% }) %>
+                    </td>
+                    <td>₹ <%= emp.salary.toLocaleString() %></td>
+                    <td><%= emp.startDate %></td>
+                    <td>
+                        <a href="/delete/<%= emp.id %>" class="action-btn delete-btn">🗑️</a>
+                        <a href="/edit/<%= emp.id %>" class="action-btn edit-btn">✏️</a>
+                    </td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Employee</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="header">
+        <span class="logo-text">EMPLOYEE <b>PAYROLL</b></span>
+    </header>
+
+    <div class="form-content">
+        <form class="form" action="/edit/<%= employee.id %>" method="POST">
+            <div class="form-head">Edit Employee</div>
+
+            <div class="row-content">
+                <label class="label text" for="name">Name</label>
+                <input class="input" type="text" id="name" name="name" value="<%= employee.name %>" required>
+            </div>
+
+            <div class="row-content">
+                <label class="label text">Gender</label>
+                <div>
+                    <input type="radio" id="male" name="gender" value="Male" <%= employee.gender === 'Male' ? 'checked' : '' %>>
+                    <label class="text" for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="Female" <%= employee.gender === 'Female' ? 'checked' : '' %>>
+                    <label class="text" for="female">Female</label>
+                </div>
+            </div>
+
+            <div class="row-content">
+                <label class="label text">Department</label>
+                <div>
+                    <% 
+                    const depts = employee.department || [];
+                    const allDepts = ['HR', 'Sales', 'Finance', 'Engineer'];
+                    allDepts.forEach(d => { 
+                    %>
+                        <input class="checkbox" type="checkbox" id="<%= d %>" name="department" value="<%= d %>" <%= depts.includes(d) ? 'checked' : '' %>>
+                        <label class="text" for="<%= d %>"><%= d %></label>
+                    <% }); %>
+                </div>
+            </div>
+
+            <div class="row-content">
+                <label class="label text" for="salary">Salary</label>
+                <input class="input" type="number" id="salary" name="salary" value="<%= employee.salary %>" required>
+            </div>
+
+            <div class="row-content">
+                <label class="label text">Start Date</label>
+                <div>
+                    <input
+                    type="date"
+                    id="startDate"
+                    name="startDate"
+                    value="2018-07-22"
+                    required
+                     />
+                </div>
+            </div>
+
+            <div class="row-content">
+                <label class="label text" for="notes">Notes</label>
+                <textarea id="notes" class="input" name="notes" style="height:100px"><%= employee.notes %></textarea>
+            </div>
+
+            <div class="buttonParent">
+                <a href="/" class="resetButton button cancelButton">Cancel</a>
+                <button type="submit" class="button submitButton">Update</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
