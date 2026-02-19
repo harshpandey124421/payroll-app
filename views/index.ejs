@@ -28,6 +28,8 @@
                     <th>Gender</th>
                     <th>Department</th>
                     <th>Salary</th>
+                    <th>Tax (12%)</th>
+                    <th>Net Salary</th>
                     <th>Start Date</th>
                     <th>Actions</th>
                 </tr>
@@ -42,6 +44,8 @@
                        <span class="dept-label"><%= emp.department %></span>
                     </td>
                     <td>₹ <%= emp.salary.toLocaleString() %></td>
+                    <td>₹ <%= emp.tax.toLocaleString() %></td>
+                    <td>₹ <%= emp.netSalary.toLocaleString() %></td>
                     <td><%= emp.startDate %></td>
                     <td>
                         <a href="/delete/<%= emp.id %>" class="action-btn delete-btn">🗑️</a>

@@ -1,24 +1,26 @@
 [
   {
-    "id": 1771480794780,
-    "name": "dfdfdfdf",
-    "gender": "Female",
-    "department": [
-      "Sales"
-    ],
-    "salary": 55112,
+    "id": 1771495836921,
+    "name": "Harsh Pandey",
+    "gender": "Male",
+    "department": "Engineer",
+    "salary": 300,
+    "tax": 36,
+    "netSalary": 264,
     "startDate": "2018-07-22",
-    "notes": "dfdf",
-    "profilePic": "https://ui-avatars.com/api/?name=dfdfdfdf&background=random"
+    "notes": "hp",
+    "profilePic": "https://ui-avatars.com/api/?name=Harsh Pandey&background=random"
   },
   {
-    "id": 1771493786915,
-    "name": "dfdfd",
-    "gender": "Male",
-    "department": "HR",
-    "salary": 666,
+    "id": 1771496102086,
+    "name": "fgfdfd",
+    "gender": "Female",
+    "department": "Sales",
+    "salary": 2000,
+    "tax": 240,
+    "netSalary": 1760,
     "startDate": "2018-07-22",
-    "notes": "dfdfd",
-    "profilePic": "https://ui-avatars.com/api/?name=dfdfd&background=random"
+    "notes": "fgfggdgffdfd",
+    "profilePic": "https://ui-avatars.com/api/?name=fgfdfd&background=random"
   }
 ]
