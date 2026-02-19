@@ -11,13 +11,11 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 
-// --- ROUTES ---
 
-// 1. Dashboard (Read & Display)
+// 1. Dashboard
 app.get('/', async (req, res) => {
     const employees = await fileHandler.getEmployees();
     
-    // Calculate Tax (12%) and Net Salary for display only
     const processedEmployees = employees.map(emp => {
         const salary = Number(emp.salary);
         const tax = salary * 0.12; 
@@ -31,13 +29,12 @@ app.get('/', async (req, res) => {
     res.render('index', { employees: processedEmployees });
 });
 
-// 2. Add Employee Form
+// 2. Add Employee
 app.get('/add', (req, res) => {
     res.render('add');
 });
 
-// 3. Process Add Employee (Create)
-// UPDATED: Now accepts 'startDate' directly
+// 3. Process
 app.post('/add', async (req, res) => {
     const { name, gender, department, salary, startDate, notes } = req.body;
 
@@ -50,10 +47,9 @@ app.post('/add', async (req, res) => {
         id: Date.now(),
         name,
         gender,
-        // Handle department as array even if single checkbox checked
         department: Array.isArray(department) ? department : (department ? [department] : []), 
         salary: Number(salary),
-        startDate: startDate, // DIRECTLY SAVED (Format: YYYY-MM-DD)
+        startDate: startDate, 
         notes,
         profilePic: `https://ui-avatars.com/api/?name=${name}&background=random`
     };
@@ -65,20 +61,17 @@ app.post('/add', async (req, res) => {
     res.redirect('/');
 });
 
-// 4. Edit Employee Form (Read Single)
-// UPDATED: No longer splits the date. Passes the employee object "as is".
+// 4. Edit Employee
 app.get('/edit/:id', async (req, res) => {
     const employees = await fileHandler.getEmployees();
     const employee = employees.find(e => e.id == req.params.id);
     
     if (!employee) return res.redirect('/');
     
-    // We send the employee object. The EJS file will use employee.startDate directly.
     res.render('edit', { employee });
 });
 
-// 5. Process Edit (Update)
-// UPDATED: Now reads 'startDate' from body
+// 5. Process Edit
 app.post('/edit/:id', async (req, res) => {
     const { name, gender, department, salary, startDate, notes } = req.body;
     let employees = await fileHandler.getEmployees();
@@ -91,7 +84,7 @@ app.post('/edit/:id', async (req, res) => {
             gender,
             department: Array.isArray(department) ? department : (department ? [department] : []),
             salary: Number(salary),
-            startDate: startDate, // DIRECTLY UPDATED
+            startDate: startDate,
             notes
         };
         await fileHandler.saveEmployees(employees);

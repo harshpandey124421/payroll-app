@@ -1,15 +1,14 @@
 [
   {
-    "id": 1715623456789,
-    "name": "Amarpa Shashanka Keerthi Kumar",
+    "id": 1771480794780,
+    "name": "dfdfdfdf",
     "gender": "Female",
     "department": [
-      "Sales",
-      "HR"
+      "Sales"
     ],
-    "salary": 10000,
-    "startDate": "2019-10-29",
-    "notes": "Top performer",
-    "profilePic": "assets/profile-images/Ellipse -1.png"
+    "salary": 55112,
+    "startDate": "2018-07-22",
+    "notes": "dfdf",
+    "profilePic": "https://ui-avatars.com/api/?name=dfdfdfdf&background=random"
   }
 ]
