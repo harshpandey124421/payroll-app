@@ -39,9 +39,7 @@
                     <td><%= emp.name %></td>
                     <td><%= emp.gender %></td>
                     <td>
-                        <% emp.department.forEach(dept => { %>
-                            <span class="dept-label"><%= dept %></span>
-                        <% }) %>
+                       <span class="dept-label"><%= emp.department %></span>
                     </td>
                     <td>₹ <%= emp.salary.toLocaleString() %></td>
                     <td><%= emp.startDate %></td>
