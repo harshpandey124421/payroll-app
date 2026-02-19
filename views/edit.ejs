@@ -37,7 +37,7 @@
                     const allDepts = ['HR', 'Sales', 'Finance', 'Engineer'];
                     allDepts.forEach(d => { 
                     %>
-                        <input class="checkbox" type="checkbox" id="<%= d %>" name="department" value="<%= d %>" <%= depts.includes(d) ? 'checked' : '' %>>
+                        <input class="checkbox" type="radio" id="<%= d %>" name="department" value="<%= d %>" <%= depts.includes(d) ? 'checked' : '' %>>
                         <label class="text" for="<%= d %>"><%= d %></label>
                     <% }); %>
                 </div>

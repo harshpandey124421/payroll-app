@@ -47,7 +47,7 @@ app.post('/add', async (req, res) => {
         id: Date.now(),
         name,
         gender,
-        department: Array.isArray(department) ? department : (department ? [department] : []), 
+        department: department, 
         salary: Number(salary),
         startDate: startDate, 
         notes,
@@ -82,7 +82,7 @@ app.post('/edit/:id', async (req, res) => {
             ...employees[index],
             name,
             gender,
-            department: Array.isArray(department) ? department : (department ? [department] : []),
+            department: department,
             salary: Number(salary),
             startDate: startDate,
             notes

@@ -10,5 +10,17 @@
     "startDate": "2018-07-22",
     "notes": "dfdf",
     "profilePic": "https://ui-avatars.com/api/?name=dfdfdfdf&background=random"
+  },
+  {
+    "id": 1771493786915,
+    "name": "dfdfd",
+    "gender": "Male",
+    "department": [
+      "Sales"
+    ],
+    "salary": 666,
+    "startDate": "2018-07-22",
+    "notes": "dfdfd",
+    "profilePic": "https://ui-avatars.com/api/?name=dfdfd&background=random"
   }
 ]
